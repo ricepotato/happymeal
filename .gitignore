@@ -2,3 +2,5 @@ node_modules
 data-sets-raw
 *.DS_Store
 model/datasets/*
+image-optimizer/food-images/*
+image-optimizer/non-food-images/*
