@@ -30,8 +30,7 @@ def load_data():
     # 음식 이미지 로드 (레이블 1)
     for img_path in os.listdir(food_dir)[:IMAGE_COUNT]:
         img = tf.keras.preprocessing.image.load_img(
-            os.path.join(food_dir, img_path),
-            target_size=(IMG_HEIGHT, IMG_WIDTH)
+            os.path.join(food_dir, img_path)
         )
         img_array = tf.keras.preprocessing.image.img_to_array(img)
         images.append(img_array)
@@ -41,8 +40,7 @@ def load_data():
     # 비음식 이미지 로드 (레이블 0)
     for img_path in os.listdir(not_food_dir)[:IMAGE_COUNT]:
         img = tf.keras.preprocessing.image.load_img(
-            os.path.join(not_food_dir, img_path),
-            target_size=(IMG_HEIGHT, IMG_WIDTH)
+            os.path.join(not_food_dir, img_path)
         )
         img_array = tf.keras.preprocessing.image.img_to_array(img)
         images.append(img_array)
